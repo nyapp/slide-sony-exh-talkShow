@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Balances</title>
+    <link rel="stylesheet" href="slide-theme-tokens.css">
+    <style>
+        :root {
+            --eff-accent: #334155;
+            --eff-accent-border: #1e293b;
+            --eff-text-title: #334155;
+            --eff-text-body: #64748b;
+            --eff-bg-slide: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--page-canvas-bg);
+            font-family: var(--font-sans);
+        }
+
+        .slide {
+            width: var(--slide-width);
+            height: var(--slide-height);
+            background: var(--eff-bg-slide);
+            padding: 28px 36px 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            box-shadow: var(--slide-shadow);
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 20px;
+            border: 1px solid var(--eff-accent-border);
+            border-radius: 999px;
+            background: #ffffff;
+            color: var(--eff-accent);
+            font-size: 14px;
+            font-weight: var(--font-weight-semibold);
+            letter-spacing: 0.02em;
+            flex-shrink: 0;
+        }
+
+        .lede {
+            margin: 18px 0 0;
+            font-size: 18px;
+            font-weight: var(--font-weight-bold);
+            color: var(--eff-text-title);
+            line-height: 1.5;
+            letter-spacing: 0.01em;
+        }
+
+        .diagram-wrap {
+            flex: 1;
+            width: 100%;
+            min-height: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 8px;
+        }
+
+        .diagram {
+            width: 100%;
+            max-width: 760px;
+            height: 100%;
+            max-height: 400px;
+        }
+
+        .node-label {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family: var(--font-sans);
+            font-size: 15px;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.4;
+            letter-spacing: 0.02em;
+            padding: 12px;
+        }
+
+        .center-label {
+            margin: 0;
+            font-family: var(--font-sans);
+            font-size: 16px;
+            font-weight: 700;
+            fill: var(--eff-text-title);
+            letter-spacing: 0.06em;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide" role="document" aria-label="作品を支える三つのバランス">
+        <div class="pill">Three Balances</div>
+        <p class="lede">作品展「エフォートレス・メモリアル」作品は、三つのバランスの上に成り立っている。</p>
+
+        <div class="diagram-wrap">
+            <svg class="diagram" viewBox="0 0 760 400" role="img" aria-label="三つの頂点に個人の作家性、新しいブライダル価値の提案、ソニーストア銀座の認知向上を配置した正三角形">
+                <!--
+                  正三角形（辺長 290）
+                  Top: (380, 74.4)
+                  BL:  (235, 325.6)
+                  BR:  (525, 325.6)
+                  高さ = 290 * √3/2 ≈ 251.15
+                -->
+                <polygon
+                    points="380,74.4 235,325.6 525,325.6"
+                    fill="none"
+                    stroke="#334155"
+                    stroke-width="3"
+                    stroke-linejoin="round"
+                ></polygon>
+
+                <text class="center-label" x="380" y="225" text-anchor="middle">作品</text>
+
+                <g>
+                    <circle cx="380" cy="74.4" r="70" fill="#334155"></circle>
+                    <foreignObject x="310" y="4.4" width="140" height="140">
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="node-label">個人の<br>作家性</div>
+                    </foreignObject>
+                </g>
+
+                <g>
+                    <circle cx="235" cy="325.6" r="70" fill="#334155"></circle>
+                    <foreignObject x="165" y="255.6" width="140" height="140">
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="node-label">新しい<br>ブライダル<br>価値の提案</div>
+                    </foreignObject>
+                </g>
+
+                <g>
+                    <circle cx="525" cy="325.6" r="70" fill="#334155"></circle>
+                    <foreignObject x="455" y="255.6" width="140" height="140">
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="node-label">若年層向け<br>ソニーストア<br>の認知向上</div>
+                    </foreignObject>
+                </g>
+            </svg>
+        </div>
+    </div>
+</body>
+</html>

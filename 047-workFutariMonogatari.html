@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ふたりの物語 — 新たなスタート</title>
+    <link rel="stylesheet" href="slide-theme-tokens.css">
+    <style>
+        :root {
+            --eff-accent: #334155;
+            --eff-accent-border: #1e293b;
+            --eff-text-title: #334155;
+            --eff-text-body: #64748b;
+            --eff-bg-slide: #ffffff;
+            --eff-line: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--page-canvas-bg);
+            font-family: var(--font-sans);
+        }
+
+        .slide {
+            width: var(--slide-width);
+            height: var(--slide-height);
+            background: var(--eff-bg-slide);
+            padding: 24px 32px 28px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            box-shadow: var(--slide-shadow);
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 20px;
+            border: 1px solid var(--eff-accent-border);
+            border-radius: 999px;
+            background: #ffffff;
+            color: var(--eff-accent);
+            font-size: 14px;
+            font-weight: var(--font-weight-semibold);
+            letter-spacing: 0.02em;
+            flex-shrink: 0;
+        }
+
+        .hero {
+            margin-top: 16px;
+            flex: 1;
+            width: 100%;
+            min-height: 0;
+            display: grid;
+            grid-template-columns: 1.35fr 1fr;
+            gap: 28px;
+            align-items: stretch;
+        }
+
+        .photo {
+            margin: 0;
+            min-width: 0;
+            min-height: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8fafc;
+            overflow: hidden;
+        }
+
+        .photo img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+
+        .caption {
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 0;
+        }
+
+        .work-title {
+            margin: 0;
+            font-size: 22px;
+            font-weight: var(--font-weight-bold);
+            color: var(--eff-text-title);
+            line-height: 1.4;
+            letter-spacing: 0.02em;
+        }
+
+        .meta {
+            margin: 18px 0 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .meta li {
+            display: grid;
+            grid-template-columns: 4.2em 1fr;
+            gap: 10px;
+            align-items: start;
+            font-size: 13px;
+            line-height: 1.55;
+        }
+
+        .meta-label {
+            font-weight: var(--font-weight-bold);
+            color: var(--eff-text-title);
+            letter-spacing: 0.04em;
+        }
+
+        .meta-value {
+            margin: 0;
+            font-weight: var(--font-weight-normal);
+            color: var(--eff-text-body);
+        }
+
+        .body {
+            margin: 20px 0 0;
+            padding-top: 18px;
+            border-top: 1px solid var(--eff-line);
+            font-size: 13px;
+            font-weight: var(--font-weight-normal);
+            color: var(--eff-text-body);
+            line-height: 1.75;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide" role="document" aria-label="作品 ふたりの物語 新たなスタート">
+        <div class="pill">Work</div>
+
+        <div class="hero">
+            <figure class="photo">
+                <img
+                    src="img/work-futari-monogatari.jpg"
+                    width="1024"
+                    height="724"
+                    alt="赤い屋根の小さな家を挟んで並ぶ新郎新婦の作品写真"
+                    decoding="async"
+                    fetchpriority="high"
+                >
+            </figure>
+
+            <aside class="caption">
+                <h1 class="work-title">ふたりの物語「新たなスタート」</h1>
+                <ul class="meta">
+                    <li>
+                        <span class="meta-label">Name</span>
+                        <p class="meta-value">Mao Terada, Luna Omukai,<br>Makoto Shimamura, Kanna Kobashi,<br>Misaki Watanabe</p>
+                    </li>
+                    <li>
+                        <span class="meta-label">Scene</span>
+                        <p class="meta-value">行船公園</p>
+                    </li>
+                </ul>
+                <p class="body">
+                    今日という日を迎えて、ふたりの物語は新たなスタートへ。<br>
+                    これからも、何気ない幸せを重ねていく。
+                </p>
+            </aside>
+        </div>
+    </div>
+</body>
+</html>

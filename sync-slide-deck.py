@@ -13,7 +13,16 @@ ROOT = Path(__file__).resolve().parent
 PRESENT = ROOT / "index.html"
 SLIDE_NAME = re.compile(r"^\d{3}-.+\.html$")
 # デッキには載せずファイルだけ残すスライド
-DECK_EXCLUDE = frozenset({"080-theATeam.html"})
+DECK_EXCLUDE = frozenset({
+    "050-productBox.html",
+    "060-solution.html",
+    "080-howBigIsThisThing.html",
+    "090-whatKeepsUsSleepless.html",
+    "100-tradeOffSlider.html",
+    "910-image.html",
+    "920-elevatorPitch.html",
+    "990-theATeam.html",
+})
 MARKERS = re.compile(
     r"^[ \t]*<!-- SLIDE_DECK_URLS:BEGIN -->.*?^[ \t]*<!-- SLIDE_DECK_URLS:END -->",
     re.DOTALL | re.MULTILINE,
