@@ -10,7 +10,7 @@
             --eff-accent: #334155;
             --eff-accent-border: #1e293b;
             --eff-text-title: #334155;
-            --eff-text-body: #64748b;
+            --eff-text-body: #475569;
             --eff-bg-slide: #ffffff;
         }
 
@@ -33,7 +33,7 @@
             height: var(--slide-height);
             background: var(--eff-bg-slide);
             position: relative;
-            padding: 28px 36px 32px;
+            padding: 24px 32px 28px;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -130,10 +130,12 @@
 
         .step-desc {
             margin: 0;
-            font-size: var(--fs-steps-desc);
+            font-size: 14px;
             font-weight: var(--font-weight-normal);
             color: var(--eff-text-body);
             line-height: 1.65;
+            word-break: auto-phrase;
+            text-wrap: pretty;
         }
 
         .step-arrow {
@@ -156,11 +158,11 @@
     <div class="steps-row" role="list">
         <article class="step-card" role="listitem">
             <span class="step-badge" aria-hidden="true">1</span>
-            <figure class="step-illust" aria-label="企画検討のための商品撮影イメージ" title="企画検討イメージ">
+            <figure class="step-illust" aria-label="企画会議のイメージ" title="企画立案">
                 <img
                     class="step-photo"
                     src="img/tenji-00.png"
-                    alt="商品撮影の企画検討イメージ"
+                    alt="学生が撮影企画を話し合う様子"
                     loading="lazy"
                     decoding="async"
                     referrerpolicy="no-referrer"
@@ -168,18 +170,18 @@
                 />
             </figure>
             <h2 class="step-heading">企画立案</h2>
-            <p class="step-desc">ターゲット像と訴求軸を整理し、ブランド価値が伝わる撮影企画を具体化します。</p>
+            <p class="step-desc">誰に何を伝えるかを決め、テーマ・ロケ地・衣装まで撮影企画を練り上げます。</p>
         </article>
 
         <span class="step-arrow" aria-hidden="true"></span>
 
         <article class="step-card" role="listitem">
             <span class="step-badge" aria-hidden="true">2</span>
-            <figure class="step-illust" aria-label="楽天RMS 商品撮影イメージ" title="楽天RMS 商品撮影イメージ">
+            <figure class="step-illust" aria-label="作品制作のイメージ" title="作品制作">
                 <img
                     class="step-photo"
-                    src="img//tenji-01.png"
-                    alt="プロの写真撮影スタジオで商品を撮影する現場"
+                    src="img/tenji-01.png"
+                    alt="撮影した写真を確認しながら仕上げる様子"
                     loading="lazy"
                     decoding="async"
                     referrerpolicy="no-referrer"
@@ -187,18 +189,18 @@
                 />
             </figure>
             <h2 class="step-heading">作品制作</h2>
-            <p class="step-desc">企画意図に沿って撮影とレタッチを行い、商品の魅力を最大化する表現へ仕上げます。</p>
+            <p class="step-desc">企画の意図に沿って撮影とレタッチを行い、一枚の作品に仕上げます。</p>
         </article>
 
         <span class="step-arrow" aria-hidden="true"></span>
 
         <article class="step-card" role="listitem">
             <span class="step-badge" aria-hidden="true">3</span>
-            <figure class="step-illust" aria-label="展示用の商品ビジュアルイメージ" title="展示イメージ">
+            <figure class="step-illust" aria-label="作品展示のイメージ" title="作品展示">
                 <img
                     class="step-photo"
                     src="img/tenji-02.png"
-                    alt="展示用に仕上げた商品ビジュアルのイメージ"
+                    alt="写真展の会場で来場者に作品を紹介する様子"
                     loading="lazy"
                     decoding="async"
                     referrerpolicy="no-referrer"
@@ -206,7 +208,7 @@
                 />
             </figure>
             <h2 class="step-heading">作品展示</h2>
-            <p class="step-desc">完成画像を媒体別に最適化して展開し、効果検証を通じて次回施策へ反映します。</p>
+            <p class="step-desc">プリントや見せ方まで考えて会場に展示し、来場者の反応を次に生かします。</p>
         </article>
     </div>
 </div>
