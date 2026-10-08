@@ -15,6 +15,8 @@ SLIDE_NAME = re.compile(r"^\d{3}-.+\.html$")
 # デッキには載せずファイルだけ残すスライド
 DECK_EXCLUDE = frozenset({
     "050-productBox.html",
+    "052-workSunsetBouquet.html",
+    "053-workOrange.html",
     "060-solution.html",
     "080-howBigIsThisThing.html",
     "090-whatKeepsUsSleepless.html",
